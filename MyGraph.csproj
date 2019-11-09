@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{68648BF8-1DD7-437F-B3E6-BC753AAFB3EA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MyGraph</RootNamespace>
+    <AssemblyName>MyGraph</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <DontImportPostSharp>True</DontImportPostSharp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ninject, Version=3.0.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Externals\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="PostSharp, Version=4.0.44.0, Culture=neutral, PublicKeyToken=b13fd38b8f9c99d7, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\PostSharp.4.0.44\lib\net35-client\PostSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dictionary\GraphContentForCombo.cs" />
+    <Compile Include="Dictionary\GraphDictionary.cs" />
+    <Compile Include="Dictionary\IGraphContentForCmb.cs" />
+    <Compile Include="Dictionary\IGraphDictionary.cs" />
+    <Compile Include="Field\Field.cs" />
+    <Compile Include="Field\FieldComparer.cs" />
+    <Compile Include="Field\IField.cs" />
+    <Compile Include="Graph\GraphData\Enums\EnumsConcatToSql.cs" />
+    <Compile Include="Graph\GraphData\Enums\HistoryBonFields.cs" />
+    <Compile Include="Graph\GraphData\Enums\VBonusFields.cs" />
+    <Compile Include="Graph\GraphData\Enums\VEmpFields.cs" />
+    <Compile Include="Graph\GraphData\Enums\HistoryFields.cs" />
+    <Compile Include="Graph\GraphData\Enums\SqlTableNames.cs" />
+    <Compile Include="Graph\GraphData\Enums\VStaffListFields.cs" />
+    <Compile Include="Graph\GraphData\Enums\VWorkListFields.cs" />
+    <Compile Include="Graph\GraphData\GraphData.cs" />
+    <Compile Include="Graph\GraphData\GraphDataReal.cs" />
+    <Compile Include="Graph\GraphTableEqualityComparer.cs" />
+    <Compile Include="Graph\IGraphTable.cs" />
+    <Compile Include="Graph\IGraphTablesGroup.cs" />
+    <Compile Include="Graph\GraphTable.cs" />
+    <Compile Include="Graph\GraphTablesGroup.cs" />
+    <Compile Include="Graph\IGraphConnection.cs" />
+    <Compile Include="Graph\PathFinder\IWavePathFinderPFO.cs" />
+    <Compile Include="Graph\PathFinder\WavePathFinderPFO.cs" />
+    <Compile Include="Graph\GraphConnection.cs" />
+    <Compile Include="SqlBlocks\Agregate\IAgregateForFields.cs" />
+    <Compile Include="SqlManager\AgregateSql.cs" />
+    <Compile Include="SqlManager\IAgregateSql.cs" />
+    <Compile Include="SqlManager\ISqlManager.cs" />
+    <Compile Include="SqlManager\ParserSqlBlocks.cs" />
+    <Compile Include="SqlManager\SqlManager.cs" />
+    <Compile Include="SqlBlocks\Agregate\AgregateForFields.cs" />
+    <Compile Include="SqlBlocks\Agregate\AgregateForFieldsAvg.cs" />
+    <Compile Include="SqlBlocks\Agregate\AgregateForFieldsCount.cs" />
+    <Compile Include="SqlBlocks\Agregate\AgregateForFieldsMax.cs" />
+    <Compile Include="SqlBlocks\Agregate\AgregateForFieldsMin.cs" />
+    <Compile Include="SqlBlocks\Agregate\AgregateForFieldsSum.cs" />
+    <Compile Include="SqlBlocks\Factory\ISqlBlocksFactory.cs" />
+    <Compile Include="SqlBlocks\Factory\SqlBlocksFactory.cs" />
+    <Compile Include="SqlBlocks\ISqlBlocks.cs" />
+    <Compile Include="SqlBlocks\ISqlBlocksBuilder.cs" />
+    <Compile Include="SqlBlocks\SqlBlocks.cs" />
+    <Compile Include="SqlBlocks\SqlBlocksBuilder.cs" />
+    <Compile Include="SqlBlocks\Where\FieldWhere.cs" />
+    <Compile Include="SqlBlocks\Where\FieldWhereCombo.cs" />
+    <Compile Include="SqlBlocks\Where\FieldWhereDate.cs" />
+    <Compile Include="SqlBlocks\Where\FieldWhereText.cs" />
+    <Compile Include="SqlBlocks\Where\IFieldWhere.cs" />
+    <Compile Include="SqlBlocks\ISql.cs" />
+    <Compile Include="SqlBlocks\Order\IFieldOrder.cs" />
+    <Compile Include="SqlBlocks\Order\FieldOrder.cs" />
+    <Compile Include="SqlBlocks\Sides\Comparers\OneSideComparer.cs" />
+    <Compile Include="SqlBlocks\Sides\Comparers\TwoSideComparer.cs" />
+    <Compile Include="SqlBlocks\Sides\IOneSide.cs" />
+    <Compile Include="SqlBlocks\Sides\ITwoSides.cs" />
+    <Compile Include="SqlBlocks\Sides\OneSide.cs" />
+    <Compile Include="SqlBlocks\Sides\TwoSides.cs" />
+    <Compile Include="SqlBlocks\Sides\TwoSidesDecorator.cs" />
+    <Compile Include="GraphModule.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlBlocks\Where\Operators\WhereAnd.cs" />
+    <Compile Include="SqlBlocks\Where\Operators\WhereCloseParenthesis.cs" />
+    <Compile Include="SqlBlocks\Where\Operators\WhereOpenParenthesis.cs" />
+    <Compile Include="SqlBlocks\Where\Operators\WhereOperator.cs" />
+    <Compile Include="SqlBlocks\Where\Operators\WhereOr.cs" />
+    <Compile Include="WaveAlgorithm\IWavePathFinder.cs" />
+    <Compile Include="WaveAlgorithm\IWaveConnection.cs" />
+    <Compile Include="WaveAlgorithm\IWavePoint.cs" />
+    <Compile Include="WaveAlgorithm\WavePathFinder.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PFOClasses\PFOClasses.csproj">
+      <Project>{0b347c84-f0e7-487a-8812-999385c1fcad}</Project>
+      <Name>PFOClasses</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Util\Util.csproj">
+      <Project>{55b78fac-d6f0-4610-8704-99dc064dbabf}</Project>
+      <Name>Util</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\PostSharp.4.0.44\tools\PostSharp.targets" Condition="Exists('..\packages\PostSharp.4.0.44\tools\PostSharp.targets')" />
+  <Target Name="EnsurePostSharpImported" BeforeTargets="BeforeBuild" Condition="'$(PostSharp30Imported)' == ''">
+    <Error Condition="!Exists('..\packages\PostSharp.4.0.44\tools\PostSharp.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://www.postsharp.net/links/nuget-restore." />
+    <Error Condition="Exists('..\packages\PostSharp.4.0.44\tools\PostSharp.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://www.postsharp.net/links/nuget-restore." />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

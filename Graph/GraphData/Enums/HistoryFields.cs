@@ -1,0 +1,50 @@
+﻿using Util.MyGeneral;
+
+namespace MyGraph.Graph.GraphData.Enums
+{
+    public enum HistoryFields
+    {
+        [StringValue("id_e")]
+        ID_E,
+        [StringValue("name")]
+        NAME,
+        [StringValue("fam")]
+        FAM,
+        [StringValue("second_name")]
+        SEC_NAME,
+        [StringValue("gender")]
+        GENDER,
+        [StringValue("degree")]
+        DEG,
+        [StringValue("rank")]
+        RANK,
+        [StringValue("division")]
+        DIVISION,
+        [StringValue("position")]
+        POSITION,
+        [StringValue("lvl")]
+        LVL,
+        [StringValue("PKG")]
+        PKG,
+        [StringValue("category")]
+        CAT,
+        [StringValue("type")]
+        TYPE,
+        [StringValue("funding_source")]
+        FUND,
+        [StringValue("full_work")]
+        FW,
+        [StringValue("stavka")]
+        STAVKA,
+        [StringValue("salary")]
+        SALARY,
+        [StringValue("date_start")]
+        DATE_START,
+        [StringValue("date_finish")]
+        DATE_FINISH,
+        [StringValue("status")]
+        STATUS,
+        [StringValue("group_pos")]
+        GROUP_POS
+    }
+}
