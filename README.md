@@ -7,9 +7,11 @@ When user has chosen all needed blocks (SELECT, aggregate functions, WHERE, cond
 
 <h2>Example</h2> 
 The user wants to know names of all employees which working on Project "Project A". In addition, the user wants to know their salaries.
+
 User chose in Select block next fields:
 - Name of Employee
 - Sum of Salary
+
 in condition block:
 - Project name = "Project A"
 
@@ -31,4 +33,4 @@ INNER JOIN Projects projects ON projects.id = projectMembers.idProject<br/>
 WHERE projects.name = "Project A"<br/></i>
 
 
-[image](https://www.dropbox.com/s/7o1h2jpex2s4ois/2019-11-09_16-49-59.jpg)
+[image](http://support.anisoprint.com/wp-content/uploads/img/2019-11-09_16-49-59.jpg)
